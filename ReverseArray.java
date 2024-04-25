@@ -56,6 +56,27 @@ public class ReverseArray {
         }
     }
 
+    public static int reverseNumber(int number) {
+        int reversedNumber = 0;
+        while (number != 0) {
+            int digit = number % 10;
+            reversedNumber = reversedNumber * 10 + digit;
+            number = number / 10;
+        }
+        return reversedNumber;
+    }
+
+    static String reverseANumber(int n){
+        String number = String.valueOf(n);
+
+        StringBuilder stringBuilder = new StringBuilder();
+
+        for (int i = number.length()-1 ; i>=0 ; i--){
+            stringBuilder.append(number.charAt(i));
+        }
+        return stringBuilder.toString();
+    }
+
     public static void main(String[] args) {
 
         int[] arr = {1,2,3,4,5};
@@ -69,5 +90,7 @@ public class ReverseArray {
         System.out.println();
         reverseArrayUsingStack(arr);
         printArray(arr);
+        System.out.println();
+        System.out.println(reverseANumber(20));
     }
 }
