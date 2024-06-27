@@ -23,5 +23,7 @@ public class Main {
         //04
         System.out.println(SearchElementInArray.search(list ,list.length,45));
         System.out.println(Palindrome.isPalindrome("ABB"));
+
+        ReverseArray.reverseArrayExtraArray(list);
     }
 }
